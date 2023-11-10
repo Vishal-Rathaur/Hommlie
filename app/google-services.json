@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "958883256286",
+    "project_id": "ikksa-b8a62",
+    "storage_bucket": "ikksa-b8a62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958883256286:android:d2ae93d3dc3874876d6f4f",
+        "android_client_info": {
+          "package_name": "com.ikksa.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958883256286-vr1u3vlt09f2kk03ik3p48nn4ue25t9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBenpQl58ypKKCcTOreD_DSKnbOLErA5l4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "958883256286-vr1u3vlt09f2kk03ik3p48nn4ue25t9k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
