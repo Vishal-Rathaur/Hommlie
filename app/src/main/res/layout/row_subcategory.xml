@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/iv_card"
+        android:layout_width="@dimen/_73sdp"
+        android:layout_height="@dimen/_75sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_12sdp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="2dp"
+        android:layout_marginBottom="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_18sdp">
+        <ImageView
+            android:id="@+id/ivsearchproduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_category_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/iv_card"
+        app:layout_constraintEnd_toStartOf="@+id/iv_right_arrow"
+        app:layout_constraintStart_toEndOf="@id/iv_card"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:text="Salon Luxe"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="15sp"
+        android:fontFamily="@font/sfprodisplay_medium"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:textColor="@color/black_heading_color"
+        />
+
+    <TextView
+        android:id="@+id/tv_category_starting_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_category_name"
+        app:layout_constraintBottom_toTopOf="@id/tv_category_subtext"
+        app:layout_constraintStart_toEndOf="@id/iv_card"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:text="Salon Luxe"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:textColor="@color/home_header"
+        android:fontFamily="@font/sfprodisplay_medium"
+        android:backgroundTint="@color/gray_line_color"
+        android:textSize="@dimen/_11ssp"
+        android:background="@drawable/white_rect"
+        />
+
+    <TextView
+        android:id="@+id/tv_category_subtext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/iv_card"
+        app:layout_constraintTop_toBottomOf="@+id/tv_category_starting_price"
+        app:layout_constraintEnd_toStartOf="@+id/iv_right_arrow"
+        app:layout_constraintStart_toEndOf="@id/iv_card"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:fontFamily="@font/helvetica"
+        android:layout_marginTop="0dp"
+        android:text="Indulgent &amp; luxurious"
+        android:textColor="@color/black_subHeading_color"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginBottom="0dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_right_arrow"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="@id/tv_category_name"
+        android:layout_marginTop="@dimen/_3sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_right"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:tint="@color/home_header"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/LightGray_Color"
+        app:layout_constraintStart_toStartOf="@id/iv_card"
+        app:layout_constraintEnd_toEndOf="@id/iv_right_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

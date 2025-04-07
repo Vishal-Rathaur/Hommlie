@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rlToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivheart"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_bag"
+            android:background="@drawable/ic_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivnotification"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.545"
+            android:padding="4dp"
+            />
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_search"
+            android:background="@drawable/ic_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivnotification"
+            app:layout_constraintHorizontal_bias="0.80"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.571"
+            android:padding="4dp"/>
+
+        <com.hommlie.customfonts.MyTextView_SemiBold
+            android:layout_width="wrap_content"
+            android:id="@+id/tvHome"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textColor="@color/Blackcolor"
+            android:textSize="25sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/plusjakartasans_bold"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:src="@drawable/hommlie_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rlCountnotification"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:elevation="@dimen/_3sdp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.98"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2">
+
+            <com.hommlie.customfonts.MyTextView_Regular
+                android:id="@+id/tvCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/ivnotification"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@drawable/ic_bg"
+            android:src="@drawable/ic_notification"
+            android:paddingTop="@dimen/_3sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="2dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/rlToolBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/track_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="3dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    >
+                    <TextView
+                        android:id="@+id/tv_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="Order ID: 2733"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/plusjakartasans_bold"
+                        />
+                    <TextView
+                        android:id="@+id/tv_trackOrder"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="Track"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp"
+                        android:background="@drawable/coupon_background_design"
+                        android:backgroundTint="@color/color249370"
+                        android:fontFamily="@font/plusjakartasans_semi_bold"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_4sdp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_placedTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tv_account"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="Placed at : 21 May-2024 6:27 PM"
+                        android:textColor="#66000000"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/plussakartasans_medium"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tv_placedTime"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="Total Cost"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/plusjakartasans_semi_bold"
+                        />
+                    <TextView
+                        android:id="@+id/tv_totalValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tv_placedTime"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="\u20B9342.90"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/plusjakartasans_semi_bold"
+                        />
+                    <View
+                        android:id="@+id/view_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_total"
+                        android:background="@drawable/dash_line"
+                        android:layout_marginTop="@dimen/_8sdp"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_arrivalTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/view_line"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="2024-05-23"
+                        android:textColor="#66000000"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:fontFamily="@font/plussakartasans_medium"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="@+id/tv_arrivalTime"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="4:00 PM - 6:00 PM"
+                        android:textColor="#66000000"
+                        android:textSize="@dimen/_10ssp"
+                        android:fontFamily="@font/plussakartasans_medium"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/complete_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="3dp"
+                app:layout_constraintTop_toBottomOf="@id/track_card"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    >
+                    <TextView
+                        android:id="@+id/tv_complete_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="Order ID: 2733"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/plusjakartasans_bold"
+                        />
+                    <TextView
+                        android:id="@+id/tv_complete_trackOrder"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="Completed"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp"
+                        android:background="@drawable/coupon_background_design"
+                        android:backgroundTint="#D4E0FA"
+                        android:fontFamily="@font/plusjakartasans_semi_bold"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_4sdp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_complete_placedTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tv_complete_account"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="Placed at : 21 May-2024 6:27 PM"
+                        android:textColor="#66000000"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/plussakartasans_medium"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_complete_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tv_complete_placedTime"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="Total Cost"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/plusjakartasans_semi_bold"
+                        />
+                    <TextView
+                        android:id="@+id/tv_complete_totalValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tv_complete_placedTime"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="\u20B9342.90"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/plusjakartasans_semi_bold"
+                        />
+                    <View
+                        android:id="@+id/view_complete_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_complete_total"
+                        android:background="@drawable/dash_line"
+                        android:layout_marginTop="@dimen/_8sdp"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_complete_arrivalTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/view_complete_line"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="2024-05-23"
+                        android:textColor="#66000000"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:fontFamily="@font/plussakartasans_medium"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_complete_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="@+id/tv_complete_arrivalTime"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="4:00 PM - 6:00 PM"
+                        android:textColor="#66000000"
+                        android:textSize="@dimen/_10ssp"
+                        android:fontFamily="@font/plussakartasans_medium"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tv_complete_time"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:weightSum="2"
+                        >
+                        <com.hommlie.customfonts.Button_Medium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/transparent_back_5sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:backgroundTint="@color/black"
+                            android:text="Download invoice"
+                            android:textAllCaps="false"
+                            />
+                        <com.hommlie.customfonts.Button_Medium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/transparent_back_5sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:backgroundTint="@color/black"
+                            android:text="Download Report"
+                            android:textAllCaps="false"
+                            />
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

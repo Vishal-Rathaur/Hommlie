@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/swipe"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     app:leftEdgeSwipeOffset="0dp"
-    app:rightEdgeSwipeOffset="0dp">
+    android:paddingBottom="0dp"
+    app:rightEdgeSwipeOffset="0dp"
+    >
 
 
     <LinearLayout
@@ -32,21 +35,24 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clfirst"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="@dimen/_8sdp"
-            app:cardElevation="10dp"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            >
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card"
-                android:layout_width="@dimen/_60sdp"
+                android:layout_width="@dimen/_70sdp"
                 android:layout_height="@dimen/_70sdp"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:background="@null"
@@ -64,7 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/LightGray_Color"
-                    android:scaleType="fitXY"
+                    android:scaleType="centerCrop"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.cardview.widget.CardView>
@@ -73,18 +79,17 @@
                 android:id="@+id/tvcateitemname"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_1sdp"
                 android:layout_marginStart="@dimen/_15sdp"
                 android:layout_marginEnd="@dimen/_15sdp"
                 android:ellipsize="end"
                 android:maxEms="10"
-                android:maxLines="1"
-                android:singleLine="true"
+                android:maxLines="2"
                 android:text="@string/man_t_shirts"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/PoppinsSemiBold"
                 android:textColor="@color/Blackcolor"
-                android:textSize="@dimen/_12sdp"
+                android:textSize="@dimen/_11sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/tvcateitemname"
                 app:layout_constraintStart_toEndOf="@id/card"
@@ -117,11 +122,8 @@
                 android:textAppearance="@style/PoppinsRegular"
                 android:textColor="@color/medium_gray"
                 android:textSize="@dimen/_10sdp"
-                app:layout_constraintBottom_toTopOf="@id/tvcartitemprice"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1"
-                app:layout_constraintStart_toEndOf="@id/card"
-                app:layout_constraintTop_toBottomOf="@+id/tvcateitemname" />
+                app:layout_constraintTop_toTopOf="@+id/tvcartitemprice"
+                app:layout_constraintEnd_toEndOf="parent" />
 
             <TextView
                 android:id="@+id/tvcartitemprice"
@@ -133,10 +135,10 @@
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/PoppinsSemiBold"
                 android:textColor="@color/Blackcolor"
-                android:textSize="@dimen/_12sdp"
+                android:textSize="@dimen/_11sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/card"
-                app:layout_constraintTop_toBottomOf="@id/tvcartitemqty" />
+                app:layout_constraintTop_toBottomOf="@id/tvcartitemsize" />
 
             <TextView
                 android:id="@+id/tvorderstatus"
@@ -147,6 +149,7 @@
                 android:text="@string/order_cancelled"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/PoppinsRegular"
+                android:visibility="gone"
                 android:textColor="@color/red"
                 android:textSize="@dimen/_8sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -163,6 +166,7 @@
             android:layout_marginTop="@dimen/_5sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/clfirst">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -263,13 +267,64 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
+            android:id="@+id/view_l"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="@dimen/_8sdp"
             android:background="@color/LightGray_Color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cl2" />
+            app:layout_constraintTop_toBottomOf="@id/cl3"
+            android:visibility="visible"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl3"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:background="#ffffff"
+            android:layout_marginStart="16dp"
+            android:visibility="visible"
+            android:layout_marginTop="10dp"
+            android:layout_height="@dimen/_24sdp"
+            app:layout_constraintTop_toBottomOf="@id/clfirst"
+            tools:ignore="MissingConstraints">
+
+
+            <TextView
+                android:id="@+id/btnTrackOrder"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:text="Track Order"
+                android:textSize="10sp"
+                android:fontFamily="@font/plusjakartasans_semi_bold"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_2sdp"
+                android:background="@drawable/round_blue_bg_9"
+                android:backgroundTint="@color/serviceHeadingcolor"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/btnCancel"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pink"
+                android:fontFamily="@font/plusjakartasans_semi_bold"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_2sdp"
+                android:text="Cancel"
+                android:textColor="@color/serviceHeadingcolor"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bk_for_cupons"
+    android:padding="@dimen/_10sdp">
+
+    <ImageView
+        android:id="@+id/iv_payment"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:src="@drawable/ic_success"
+        />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iv_payment"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_horizontal"
+        android:textColor="@color/color181818"
+        android:textSize="@dimen/_12ssp"
+        android:text="@string/order_sucess"
+        android:fontFamily="@font/plusjakartasans_semi_bold"
+        />
+
+    <TextView
+        android:id="@+id/orderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_status"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/color181818"
+        android:textSize="@dimen/_10ssp"
+        android:text="Order Id"
+        android:fontFamily="@font/plusjakartasans_semi_bold"
+        />
+    <TextView
+        android:id="@+id/tv_orderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_status"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/color181818"
+        android:textSize="@dimen/_10ssp"
+        android:text=""
+        android:fontFamily="@font/plusjakartasans_semi_bold"
+        />
+    <TextView
+        android:id="@+id/paymentId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/orderId"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/color181818"
+        android:textSize="@dimen/_10ssp"
+        android:text="Payment Id"
+        android:fontFamily="@font/plusjakartasans_semi_bold"
+        />
+    <TextView
+        android:id="@+id/tv_paymentId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/orderId"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/color181818"
+        android:textSize="@dimen/_10ssp"
+        android:text=""
+        android:fontFamily="@font/plusjakartasans_semi_bold"
+        />
+
+    <TextView
+        android:id="@+id/btn_ok"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_30sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_paymentId"
+        android:background="@drawable/bk_for_cupons"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_7sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="@dimen/_3sdp"
+        android:fontFamily="@font/plusjakartasans_semi_bold"
+        android:paddingBottom="@dimen/_3sdp"
+        android:textColor="@color/black"
+        android:text="OK"
+        android:gravity="center"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,15 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Ikksa</string>
+    <string name="app_name">Hommlie</string>
 
     <string name="facebook_id" translatable="false">968050263958529</string>
 
     <string name="language_english">en</string>
-    <string name="language_hindi">ar</string>
+    <string name="language_arabic">ar</string>
+    <string name="language_kannada">kn</string>
+    <string name="language_hindi">hi</string>
+
 
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="skip_continue"><![CDATA[Skip & Continue]]></string>
     <string name="login">Login</string>
     <string name="you_stay_home_we_are_always_here">You stay home we are always here</string>
+    <string name="location_key" translatable="false">AIzaSyBmaR3DSseRPUCCvGT0Ru8aK-Jrm39NlTE</string>
     <string name="signup">Signup</string>
     <string name="welcome">Welcome</string>
     <string name="please_login_to_your_account">Please login to your account</string>
@@ -86,17 +90,17 @@
     <string name="if_you_have_a_coupon_code_please_apply_it_below">If you have a coupon code, please apply it below.</string>
     <string name="apply">Apply</string>
     <string name="remove">Remove</string>
-    <string name="billing_shiping_address">Billing / Shiping address</string>
-    <string name="select_address">Select Address</string>
+    <string name="billing_shiping_address">  Service address</string>
+    <string name="select_address">Select Service Address</string>
     <string name="order_note">Order Note</string>
     <string name="note">Note</string>
-    <string name="total">Total</string>
+    <string name="total">Order Total</string>
     <string name="discount">Discount</string>
     <string name="shipping">Shipping</string>
     <string name="tax">Tax</string>
     <string name="subtotal">Subtotal</string>
     <string name="order_info">Order Info</string>
-    <string name="procced_to_payment">Procced to Payment</string>
+    <string name="procced_to_payment">Proceed to Payment</string>
     <string name="my_whishlist">My WhishList</string>
     <string name="techmonkshub">TechMonksHub Technology Solutions</string>
     <string name="computer_accessories_gaming_pc_gaming_motherboard"><![CDATA[Computer & Accessories | Gaming Pc | Gaming Motherboard]]></string>
@@ -104,7 +108,7 @@
     <string name="sku">SKU :</string>
     <string name="add_to_cart">Add to Cart</string>
     <string name="visit_store">Visit Store</string>
-    <string name="you_may_also_like">You May also like</string>
+    <string name="you_may_also_like">People also viewed</string>
     <string name="write_review">Write Review</string>
     <string name="write_your_review">Write your review</string>
     <string name="reviews">Reviews</string>
@@ -146,6 +150,7 @@
     <string name="item_add_to_cart">Item Added to cart</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
+    <string name="delete_account">Are you sure want to delete your account?</string>
     <string name="exit_screen">Are you sure to exit from this app?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
@@ -265,18 +270,18 @@
     <string name="additional">"Additional "</string>
     <string name="add_tax">Additional Tax</string>
     <string name="day">Day</string>
-    <string name="add_rating_and_review">Add Ratting and Review</string>
+    <string name="add_rating_and_review">Add Rating and Review</string>
     <string name="please_write_comment">Please write comments</string>
     <string name="ratings_reviews"><![CDATA[Rattings & Reviews]]></string>
-    <string name="product_added_successfully_into_your_cart">Product added successfully into your cart</string>
+    <string name="product_added_successfully_into_your_cart">Product added successfully in your cart</string>
     <string name="remove_product">Remove Product</string>
     <string name="remove_product_desc">"Are you sure to remove this product from your cart? "</string>
     <string name="remove_address">Remove Address</string>
     <string name="remove_address_desc">Are you sure to remove this address from your address list?</string>
     <string name="remove_favourite">Remove Favourite</string>
     <string name="remove_favourite_desc">"Are you sure to remove this product from your favourite list? "</string>
-    <string name="cancel_product">Cancel Product</string>
-    <string name="cancel_product_desc">Are you sure to cancel this product from your order?</string>
+    <string name="cancel_product">Cancel Service</string>
+    <string name="cancel_product_desc">Are you sure to cancel this service?</string>
     <string name="coupan_code_validation">Please enter the coupan code</string>
     <string name="otp_description">Check your sms for OTP. Enter OTP below and proceed further.</string>
     <string name="send">Send</string>
@@ -312,7 +317,76 @@
     <string name="enter_6_digit_otp">Enter 6 Digit OTP</string>
     <string name="swipeleft">Swipe left to Edit/Delete</string>
     <string name="wishlist_empty_title">Your wishlist is empty</string>
-    <string name="wishlist_empty_desc">Tap heart next to the product. We’ll save them for you here in your wishlist now.</string>
+    <string name="wishlist_empty_desc">Just click. We’ll save them for you here in your wishlist now.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delete_text">Delete</string>
+    <string name="booking">Booking</string>
+    <string name="offer">Offer</string>
+    <string name="account">Account</string>
+    <string name="services">Services</string>
+    <string name="what_you_are_looking_for_today">What are you looking for today</string>
+    <string name="see_all">See all</string>
+    <string name="about_hommlie">About Hommlie</string>
+    <string name="terms_condition"><![CDATA[Terms & Condition]]></string>
+    <string name="refund_cancellation_policy"><![CDATA[Refund & Cancellation Policy]]></string>
+    <string name="hommlie_wallet">Hommlie Wallet</string>
+    <string name="manage_address">Manage Address</string>
+    <string name="career">Career</string>
+    <string name="earn_with_hommlie">Earn With Hommlie</string>
+    <string name="most_booked_service">Most Booked Service</string>
+    <string name="to_provide_better_service">to provide better service</string>
+    <string name="add_your_address">Add your address</string>
+    <string name="shop">Shop</string>
+    <string name="your_account">Your Account</string>
+    <string name="personal_payment_details">Personal/Payment Details</string>
+    <string name="feedback_amp_information"><![CDATA[Feedback & Information]]></string>
+    <string name="delete_account_text">Delete Account</string>
+    <string name="my_orders">My Orders</string>
+    <string name="help_amp_support"><![CDATA[Help & Support]]></string>
+    <string name="successfully_added">Successfully Added</string>
+    <string name="bage">Bag</string>
+    <string name="cleaning_services">Cleaning Services</string>
+    <string name="pest_control">Pest Control</string>
+    <string name="safety_pro_netting">Safety-Pro Netting</string>
+    <string name="mosquito_mesh">Mosquito Mesh</string>
+    <string name="discover">Discover</string>
+    <string name="book_an_inspection">Book an Inspection</string>
+    <string name="book_on_whatsapp">Book on Whatsapp</string>
+    <string name="complaints">Complaints</string>
+    <string name="thoughtful_curations">Thoughtful Curations</string>
+    <string name="play_pause">play/pause</string>
+    <string name="why_hommlie">Why Hommlie</string>
+    <string name="iso_certified_company">ISO Certified Company</string>
+    <string name="in_house_trained_professionals">In-house trained professionals</string>
+    <string name="warranty_backed_service">Warranty Backed Service</string>
+    <string name="digital_monitoring">Digital Monitoring</string>
+    <string name="cib_approved_chemical">CIB Approved Chemical</string>
+    <string name="cost_effective">Cost effective</string>
+    <string name="health_safety_and_eco_friendly_service_and_products">Health, Safety and Eco Friendly service and products</string>
+    <string name="shop_now">Shop Now</string>
+    <string name="what_people_say">What people say</string>
+    <string name="some_interesting_facts_about_hommlie_services">Some interesting facts about Hommlie Services</string>
+    <string name="follow_us">Follow Us</string>
+    <string name="monthly_job_request">Monthly Job Request</string>
+    <string name="completed_jobs">Completed Jobs</string>
+    <string name="app_users">App Users</string>
+    <string name="resend">Resend</string>
+    <string name="referral_code_optional">Referral Code  (optional)</string>
+    <string name="enter_referral_code">Enter referral code</string>
+    <string name="by_giving_your_information_you_agree_to_our">By giving your information, you agree to our</string>
+    <string name="terms_amp_contidions"><![CDATA[Terms & Contidions]]></string>
+    <string name="and">and</string>
+    <string name="review_booking">Review Booking</string>
+    <string name="booking_successful">Booking Successful</string>
+    <string name="selected_address">Selected Address</string>
+    <string name="enter_your_address">Enter your address</string>
+    <string name="get_location">Get location</string>
+    <string name="cart_empty">Cart empty</string>
+    <string name="no_booking">No Booking</string>
+    <string name="you_have_nothing_on_your_list_yet_nit_s_never_too_late_to_change_it">You have nothing on your list yet.\nIt\'s never too late to change it 🙃</string>
+    <string name="no_result_found">No Result Found</string>
+    <string name="xpress_4hrs_delivery">Xpress 4hrs delivery</string>
 
 
 </resources>

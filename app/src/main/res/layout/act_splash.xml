@@ -3,14 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/app_bg">
+    android:layout_height="match_parent">
 
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivSplashBanner"
         android:layout_width="match_parent"
-        android:src="@drawable/splash_banner"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/tvIntroDescription"

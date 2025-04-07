@@ -39,14 +39,14 @@
 
         <TextView
             android:id="@+id/tvlatest"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:text="@string/latest"
+            android:gravity="center_vertical"
             android:textAppearance="@style/PoppinsRegular"
             android:textColor="@color/Blackcolor"
             android:textSize="@dimen/_13sdp"
-            android:textAlignment="viewStart"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvsortby" />
 
@@ -54,7 +54,7 @@
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_1sdp"
             android:background="@color/LightGray_Color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,8 +62,8 @@
 
         <TextView
             android:id="@+id/tvpricelowtohigh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:textAlignment="viewStart"
             android:text="@string/price_low_to_high"
@@ -78,14 +78,14 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/LightGray_Color"
-            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_1sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvpricelowtohigh" />
 
         <TextView
             android:id="@+id/tvpricehightolow"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:text="@string/price_high_to_low"
@@ -102,7 +102,7 @@
             android:layout_height="1dp"
             android:background="@color/LightGray_Color"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_1sdp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvpricehightolow" />
 
@@ -116,6 +116,7 @@
             android:textColor="@color/Blackcolor"
             android:textSize="@dimen/_13sdp"
             android:textAlignment="viewStart"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/view2" />
 
@@ -126,6 +127,7 @@
             android:background="@color/LightGray_Color"
             android:layout_marginTop="@dimen/_10sdp"
             app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvrattinglowtohigh" />
         <TextView
@@ -138,6 +140,7 @@
             android:textColor="@color/Blackcolor"
             android:textSize="@dimen/_13sdp"
             android:textAlignment="viewStart"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/view3" />
 
@@ -149,6 +152,7 @@
             android:background="@color/LightGray_Color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/tvrattinghightolow" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

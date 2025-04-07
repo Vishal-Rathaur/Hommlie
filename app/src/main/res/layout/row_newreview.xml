@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingEnd="@dimen/_10sdp">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/iv_card"
+        android:layout_width="@dimen/_37sdp"
+        android:layout_height="@dimen/_37sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="50dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_10sdp">
+        <ImageView
+            android:id="@+id/iv_userImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/placeholder"
+            android:scaleType="fitXY"
+            />
+    </com.google.android.material.card.MaterialCardView>
+    <TextView
+        android:id="@+id/tv_userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/iv_card"
+        app:layout_constraintBottom_toBottomOf="@id/iv_card"
+        app:layout_constraintStart_toEndOf="@id/iv_card"
+        app:layout_constraintEnd_toStartOf="@id/iv_rate"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:fontFamily="@font/plussakartasans_medium"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:textColor="@color/home_header"
+        android:text="Vishal Rathaur"/>
+    <LinearLayout
+        android:id="@+id/iv_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_star"
+        app:layout_constraintBottom_toBottomOf="@id/iv_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_card"
+        android:orientation="horizontal"
+        />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iv_card"
+        app:layout_constraintStart_toStartOf="@id/iv_card"
+        app:layout_constraintEnd_toEndOf="@id/iv_rate"
+        android:textSize="@dimen/_11ssp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:text="All times they guys are provides very good service"
+        />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_message"
+        app:layout_constraintStart_toStartOf="@id/iv_card"
+        android:layout_marginStart="@dimen/_3sdp"
+        app:layout_constraintEnd_toEndOf="@id/iv_rate"
+        android:textSize="@dimen/_10ssp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_9sdp"
+        android:text="Today"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/LightGray_Color"
+        app:layout_constraintStart_toStartOf="@id/iv_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

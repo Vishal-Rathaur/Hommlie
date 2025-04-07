@@ -3,179 +3,265 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/activityBgColor">
 
 
     <FrameLayout
         android:id="@+id/FramFragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toTopOf="@+id/llManu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/activityBgColor"/>
 
     <LinearLayout
         android:id="@+id/llManu"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_45sdp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@drawable/round_blue_bg_8"
+            android:backgroundTint="@color/LightGray_Color"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="3dp"
+        app:layout_constraintBottom_toTopOf="@id/llManu"
+        app:tabIndicatorColor="@color/serviceHeadingcolor"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicator="@drawable/round_tabindicatior_green"
+        app:tabIndicatorAnimationMode="elastic"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:clickable="false"
+        android:focusable="false"
+        app:tabIndicatorHeight="3dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         android:baselineAligned="false">
         <RelativeLayout
             android:id="@+id/menu_home"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick">
 
             <ImageView
                 android:id="@+id/ivHome"
-                android:layout_width="@dimen/_18sdp"
-                android:layout_height="@dimen/_18sdp"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_20sdp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
                 android:adjustViewBounds="true"
                 android:contentDescription="@null"
-                android:src="@drawable/ic_home" />
+                android:src="@drawable/hommlie_home" />
 
-            <com.ikksa.customfonts.MyTextView_Light
+            <TextView
                 android:id="@+id/tvHome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ivHome"
                 android:gravity="center_horizontal"
-                android:padding="3dp"
+                android:padding="0dp"
                 android:text="@string/home"
-                android:textAppearance="@style/PoppinsRegular"
+                android:fontFamily="@font/sfprodisplay_medium"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_8ssp" />
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:textSize="12sp" />
         </RelativeLayout>
-        <RelativeLayout
-            android:id="@+id/menu_fav"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="onClick">
 
-            <ImageView
-                android:id="@+id/ivFav"
-                android:layout_width="@dimen/_18sdp"
-                android:layout_height="@dimen/_18sdp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:adjustViewBounds="true"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_wish" />
-
-            <com.ikksa.customfonts.MyTextView_Light
-                android:id="@+id/tvWishlist"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/ivFav"
-                android:gravity="center_horizontal"
-                android:padding="3dp"
-                android:text="@string/wishlist"
-                android:textAppearance="@style/PoppinsRegular"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_8ssp" />
-
-        </RelativeLayout>
         <RelativeLayout
             android:id="@+id/menu_cart"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick">
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                app:cardBackgroundColor="@color/red_logout"
+                app:cardCornerRadius="@dimen/_22sdp"
+                android:layout_marginEnd="0dp"
+                android:layout_toRightOf="@id/ivCart"
+                >
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="12sp"/>
+            </androidx.cardview.widget.CardView>
+
             <ImageView
                 android:id="@+id/ivCart"
-                android:layout_width="@dimen/_18sdp"
-                android:layout_height="@dimen/_18sdp"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_20sdp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
                 android:adjustViewBounds="true"
                 android:contentDescription="@null"
-                android:src="@drawable/ic_bag" />
+                android:src="@drawable/ic_bag_check" />
 
-            <com.ikksa.customfonts.MyTextView_Light
+            <TextView
                 android:id="@+id/tvCart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ivCart"
                 android:gravity="center_horizontal"
-                android:padding="3dp"
-                android:text="@string/bag"
-                android:textAppearance="@style/PoppinsRegular"
+                android:padding="0dp"
+                android:text="Cart"
+                android:fontFamily="@font/sfprodisplay_medium"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_8ssp" />
+                android:textSize="12sp" />
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/menu_doce"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="onClick">
 
-            <ImageView
-                android:id="@+id/ivDoce"
-                android:layout_width="@dimen/_18sdp"
-                android:layout_height="@dimen/_18sdp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:adjustViewBounds="true"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_shipping" />
 
-            <com.ikksa.customfonts.MyTextView_Light
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/ivDoce"
-                android:gravity="center_horizontal"
-                android:padding="3dp"
-                android:text="@string/Orders"
-                android:textAppearance="@style/PoppinsRegular"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_8ssp"
-                android:id="@+id/tvOrder"/>
-
-        </RelativeLayout>
         <RelativeLayout
             android:id="@+id/menu_profile"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:visibility="gone"
             android:onClick="onClick">
 
             <ImageView
                 android:id="@+id/ivProfile"
-                android:layout_width="@dimen/_18sdp"
-                android:layout_height="@dimen/_18sdp"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_20sdp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:adjustViewBounds="true"
                 android:contentDescription="@null"
-                android:src="@drawable/ic_user" />
+                android:src="@drawable/ic_notification" />
 
-            <com.ikksa.customfonts.MyTextView_Light
+            <TextView
                 android:id="@+id/tvProfile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ivProfile"
                 android:gravity="center_horizontal"
-                android:padding="3dp"
-                android:text="@string/profile"
-                android:textAppearance="@style/PoppinsRegular"
+                android:padding="0dp"
+                android:text="@string/notifications"
+                android:fontFamily="@font/plussakartasans_medium"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_8ssp" />
+                android:textSize="9sp" />
         </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/menu_doce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick">
 
+            <!--            <ImageView-->
+            <!--                android:id="@+id/ivDoce"-->
+            <!--                android:layout_width="@dimen/_23sdp"-->
+            <!--                android:layout_height="@dimen/_23sdp"-->
+            <!--                android:layout_centerHorizontal="true"-->
+            <!--                android:layout_marginTop="@dimen/_10sdp"-->
+            <!--                android:adjustViewBounds="true"-->
+            <!--                android:contentDescription="@null"-->
+            <!--                android:src="@drawable/ic_offer" />-->
+
+            <ImageView
+                android:id="@+id/ivDoce"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:padding="2dp"
+                android:src="@drawable/ic_booking" />
+
+            <TextView
+                android:id="@+id/tvOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivDoce"
+                android:gravity="center_horizontal"
+                android:padding="0dp"
+                android:text="@string/booking"
+                android:fontFamily="@font/sfprodisplay_medium"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/menu_fav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick">
+
+
+            <ImageView
+                android:id="@+id/ivFav"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_shop"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tvWishlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivFav"
+                android:gravity="center_horizontal"
+                android:text="@string/shop"
+                android:fontFamily="@font/plussakartasans_medium"
+                android:textColor="@color/black"
+                android:textSize="9sp"
+                android:visibility="gone"
+                android:padding="0dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:background="@drawable/bk_shop"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/_10sdp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="H Products"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/sfprodisplay_medium"
+                    android:textSize="@dimen/_11ssp"
+                    android:layout_marginBottom="@dimen/_1sdp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
     </LinearLayout>
-
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

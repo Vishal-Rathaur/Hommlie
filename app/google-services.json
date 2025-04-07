@@ -1,36 +1,45 @@
 {
   "project_info": {
-    "project_number": "958883256286",
-    "project_id": "ikksa-b8a62",
-    "storage_bucket": "ikksa-b8a62.appspot.com"
+    "project_number": "329609338164",
+    "project_id": "hommlie-8fb41",
+    "storage_bucket": "hommlie-8fb41.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:958883256286:android:d2ae93d3dc3874876d6f4f",
+        "mobilesdk_app_id": "1:329609338164:android:93716e46455d92e2cf1961",
         "android_client_info": {
-          "package_name": "com.ikksa.user"
+          "package_name": "com.hommlie.my_app"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "958883256286-vr1u3vlt09f2kk03ik3p48nn4ue25t9k.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBenpQl58ypKKCcTOreD_DSKnbOLErA5l4"
+          "current_key": "AIzaSyBud_uEm6WJY0SZipj-StQs6N4F-FEEh5g"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "958883256286-vr1u3vlt09f2kk03ik3p48nn4ue25t9k.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329609338164:android:74be9dbc5147b338cf1961",
+        "android_client_info": {
+          "package_name": "com.hommlie.user"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBud_uEm6WJY0SZipj-StQs6N4F-FEEh5g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
         }
       }
     }

@@ -6,11 +6,41 @@
     android:background="@color/white"
     android:layout_height="match_parent">
 
+
+
     <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:src="@drawable/ic_elogo"
+        android:layout_width="62dp"
+        android:layout_height="110dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        android:src="@drawable/rightdesign2"/>
+
+    <ImageView
+        android:layout_width="59dp"
+        android:layout_height="110dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        android:src="@drawable/rightdesign"/>
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:src="@drawable/hommlie_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/_70sdp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/gini"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
@@ -18,14 +48,32 @@
     <ProgressBar
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_30sdp"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_20sdp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
         android:indeterminate="true"
+        android:visibility="gone"
         android:indeterminateDrawable="@drawable/progress_bg"
         android:progress="0"/>
+
+    <ImageView
+        android:id="@+id/iv_splash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/gifsplash"
+        android:visibility="gone"
+        />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/ivSplash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        android:src="@drawable/gifsplash"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,8 +14,7 @@
         app:cardCornerRadius="@dimen/_45sdp"
         app:cardUseCompatPadding="true"
         app:cardPreventCornerOverlap="false"
-        android:background="@null"
-        app:cardBackgroundColor="#F5F5F5"
+        app:cardBackgroundColor="#bcbcbc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,9 +26,9 @@
             android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/ivBrands"
-                android:layout_width="@dimen/_55sdp"
-                android:layout_height="@dimen/_55sdp"
-                android:scaleType="centerCrop"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:scaleType="fitCenter"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.ikksa.user">
+    package="com.hommlie.user">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,6 +19,12 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+<!--    <uses-permission android:name="android.permission.RECEIVE_SMS" />-->
+<!--    <uses-permission android:name="android.permission.READ_SMS" />-->
+
 
     <queries>
         <intent>
@@ -39,109 +51,41 @@
     </queries>
 
     <application
-        android:name="com.ikksa.user.base.BaseApplication"
+        android:name=".base.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ikksa"
         android:usesCleartextTraffic="true"
         tools:replace="android:allowBackup"
+        android:hardwareAccelerated="true"
         tools:targetApi="q">
         <activity
-            android:name="com.ikksa.user.activity.ActSignUpVendor"
+            android:name=".activity.ActShop"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:exported="false"
+          />
+        <activity
+            android:name=".activity.ActTransaction"
+            android:theme="@style/Theme.MyCustomTheme"
             android:exported="false" />
         <activity
-            android:name="com.ikksa.user.activity.ActAddMoney"
-            android:exported="true" />
-        <activity
-            android:name="com.ikksa.user.activity.ActImageSlider"
+            android:name=".activity.ActReferEarn"
+            android:theme="@style/Theme.MyCustomTheme"
             android:exported="false" />
         <activity
-            android:name="com.ikksa.user.activity.ActReturnTrackOrder"
-            android:exported="true" />
+            android:name=".activity.ActDuplicateAccount"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:exported="false" />
         <activity
-            android:name="com.ikksa.user.activity.ActRetuenRequest"
-            android:exported="true" />
-        <activity
-            android:name="com.ikksa.user.activity.ActWelCome"
-            android:exported="true" />
-        <activity
-            android:name="com.ikksa.user.activity.ActPayStack"
-            android:exported="true" />
-        <activity
-            android:name="com.ikksa.user.activity.ActCardInfo"
-            android:exported="true" />
-        <activity
-            android:name="com.ikksa.user.activity.ActPaymentMethod"
-            android:exported="true" />
-        <activity
-            android:name="com.ikksa.user.activity.ActOffers"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.ikksa.user.activity.ActPaymentSuccessFull"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.ikksa.user.activity.ActWallet"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.ikksa.user.activity.ActReturnPolicy"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.ikksa.user.activity.ActHelpContactUs"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.ikksa.user.activity.ActProvacyPolicy"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.ikksa.user.activity.ActStoreInfo"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.ikksa.user.activity.ActTrackOrder"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.ikksa.user.activity.ActNotification"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.ikksa.user.activity.ActVendorsDetails"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.ikksa.user.activity.ActVendors"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.ikksa.user.activity.ActBrandDetails"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.ikksa.user.activity.ActBrand"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.ikksa.user.activity.ActProductDescription"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.ikksa.user.activity.ActTutorial"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.ikksa.user.activity.ActSplashScreen"
+            android:name=".activity.ActFetchingLocation"
             android:exported="true"
+            android:theme="@style/Theme.Splash"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
@@ -150,95 +94,283 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBmaR3DSseRPUCCvGT0Ru8aK-Jrm39NlTE" />
+
         <activity
-            android:name="com.ikksa.user.activity.ActOrderDetails"
+            android:name=".activity.ActshowMapPicAddress"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ActApplyCoupon"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ActBookingSuccess"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ActReviewBooking"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ActSelectTimeSlot"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Act_inner_all_sub_category"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ActSellerMargin"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ActSignUpVendor"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ActAddMoney"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ActImageSlider"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ActReturnTrackOrder"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ActRetuenRequest"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ActWelCome"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ActPayStack"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ActCardInfo"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ActPaymentMethod"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ActOffers"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ActPaymentSuccessFull"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActSearch"
+            android:name=".activity.ActWallet"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActAllSubCategories"
+            android:name=".activity.ActReturnPolicy"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActAllCategories"
+            android:name=".activity.ActHelpContactUs"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActReviews"
+            android:name=".activity.ActProvacyPolicy"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActWriteReview"
+            android:name=".activity.ActStoreInfo"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActProductDetails"
+            android:name=".activity.ActTrackOrder"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActCheckout"
+            android:name=".activity.ActNotification"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActViewAll"
+            android:name=".activity.ActVendorsDetails"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActEditProfile"
+            android:name=".activity.ActVendors"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ActBrandDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ActBrand"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActSettings"
+            android:name=".activity.ActProductDescription"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActChangePassword"
+            android:name=".activity.ActTutorial"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActAddAddress"
+            android:name=".ActSplashScreen"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".activity.ActOrderDetails"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActAddress"
+            android:name=".activity.ActSearch"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActOTPVerification"
+            android:name=".activity.ActAllSubCategories"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ActAllCategories"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActSignUp"
+            android:name=".activity.ActReviews"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActForgotPassword"
+            android:name=".activity.ActWriteReview"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ActProductDetails"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActLogin"
+            android:name=".activity.ActCheckout"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActStripePayment"
+            android:name=".activity.ActViewAll"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ActEditProfile"
+            android:theme="@style/Theme.MyCustomTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActMain"
+            android:name=".activity.ActSettings"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ActChangePassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ActAddAddress"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ActAddress"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ActOTPVerification"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyCustomTheme"
             android:exported="true"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.ikksa.user.activity.ActOption"
+            android:name=".activity.ActSignUp"
             android:screenOrientation="portrait"
+            android:theme="@style/Theme.Login"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".activity.ActForgotPassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ActLogin"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ActStripePayment"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ActMain"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/ActMainTheme"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.Act_IntroScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyCustomTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ActOption"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyCustomTheme"
             android:windowSoftInputMode="adjustPan" />
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+
         <service
-            android:name="com.ikksa.user.service.MyInstanceIDListenerService"
-            android:exported="true">
+            android:name=".utils.MyFirebaseMessagingService"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
@@ -246,7 +378,7 @@
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/ic_elogo" />
+            android:resource="@drawable/hommlie_home" />
 
         <receiver
             android:name="com.razorpay.RzpTokenReceiver"
@@ -255,6 +387,17 @@
                 <action android:name="rzp.device_token.share" />
             </intent-filter>
         </receiver>
+
+        <receiver
+            android:name=".service.SmsBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.phone.permission.SMS_RETRIEVED">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+
+
 
         <activity
             android:name="com.razorpay.CheckoutActivity"

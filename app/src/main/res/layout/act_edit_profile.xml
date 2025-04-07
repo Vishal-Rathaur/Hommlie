@@ -6,15 +6,23 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/rlToolBar"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/toolbar_card"
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        android:elevation="@dimen/_2sdp"
         app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rlToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="visible">
+            <ImageView
             android:id="@+id/ivBack"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
@@ -31,9 +39,9 @@
             android:layout_centerInParent="true"
             android:text="@string/edit_profile"
             android:textAllCaps="false"
-            android:textAppearance="@style/PoppinsSemiBold"
+            android:fontFamily="@font/sfprodisplay_medium"
             android:textColor="@color/Blackcolor"
-            android:textSize="@dimen/_14ssp"
+            android:textSize="@dimen/_15ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,6 +49,7 @@
             tools:ignore="MissingPrefix" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -50,7 +59,7 @@
         android:layout_marginTop="@dimen/_20sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rlToolBar">
+        app:layout_constraintTop_toBottomOf="@id/toolbar_card">
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/ivProfile"
@@ -75,6 +84,7 @@
             android:contentDescription="camera"
             android:padding="@dimen/_6sdp"
             android:src="@drawable/ic_camera"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.9"
@@ -131,8 +141,8 @@
                 android:layout_height="@dimen/_40sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:background="@drawable/white_rect"
-                android:clickable="false"
-                android:focusable="false"
+                android:clickable="true"
+                android:focusable="true"
                 android:hint="@string/email_address"
                 android:inputType="text"
                 android:paddingStart="@dimen/_12sdp"
@@ -166,6 +176,82 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/edtEmail" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtBankName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="4dp"
+                android:visibility="gone"
+                android:background="@drawable/white_rect"
+                android:hint="Bank Name"
+                android:inputType="textCapWords"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/Blackcolor"
+                android:textColorHint="@color/medium_gray"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edMobileNumber" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtAccountNo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:visibility="gone"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/white_rect"
+                android:hint="Account Number"
+                android:inputType="number"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/Blackcolor"
+                android:textColorHint="@color/medium_gray"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtBankName" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtIfscCode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/white_rect"
+                android:hint="IFSC Code"
+                android:inputType="text"
+                android:paddingStart="@dimen/_12sdp"
+                android:visibility="gone"
+                android:paddingEnd="@dimen/_12sdp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/Blackcolor"
+                android:textColorHint="@color/medium_gray"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtAccountNo" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtUpi"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/white_rect"
+                android:hint="UPI"
+                android:inputType="text"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/Blackcolor"
+                android:textColorHint="@color/medium_gray"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/edtIfscCode" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
@@ -175,7 +261,7 @@
         style="@style/ClickableView"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:padding="5dp"
         android:text="@string/save"
         android:textAllCaps="false"

@@ -5,6 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/toolbar_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        android:elevation="@dimen/_2sdp"
+        app:layout_constraintTop_toTopOf="parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/rlToolBar"
         android:layout_width="match_parent"
@@ -32,10 +40,9 @@
             android:layout_centerInParent="true"
             android:text="@string/privacy_policy"
             android:textAllCaps="false"
-            android:textAppearance="@style/PoppinsSemiBold"
+            android:fontFamily="@font/sfprodisplay_medium"
             android:textColor="@color/Blackcolor"
-            android:textSize="@dimen/_14ssp"
-
+            android:textSize="@dimen/_15ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,13 +50,14 @@
             tools:ignore="MissingPrefix" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 <androidx.core.widget.NestedScrollView
     android:layout_width="match_parent"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/rlToolBar"
+    app:layout_constraintTop_toBottomOf="@id/toolbar_card"
     android:layout_height="0dp">
 
     <androidx.appcompat.widget.AppCompatTextView

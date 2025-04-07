@@ -219,10 +219,12 @@
                 android:textAppearance="@style/PoppinsSemiBold"
                 android:textColor="@color/Blackcolor"
                 android:textSize="@dimen/_12sdp"
-                app:layout_constraintBottom_toTopOf="@id/edtcouponcode"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rvreturntext"
                 tools:ignore="NotSibling" />
+
+<!--            app:layout_constraintBottom_toTopOf="@id/edtcouponcode"-->
 
 
             <EditText

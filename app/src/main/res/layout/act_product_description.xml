@@ -63,6 +63,7 @@
             android:clipToPadding="false"
             android:justificationMode="inter_word"
             android:overScrollMode="never"
+            android:breakStrategy="simple"
             android:text="@string/description"
             android:textAlignment="viewStart"
             android:textAppearance="@style/PoppinsRegular"

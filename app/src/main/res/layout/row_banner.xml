@@ -4,29 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <!--Standard ratio of image
+    1500 x 600 or 1500 x 700-->
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="110dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="0dp"
         app:cardMaxElevation="0dp"
         app:cardPreventCornerOverlap="false"
-        app:cardUseCompatPadding="true"
-        android:background="@null"
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:layout_marginHorizontal="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.ikksa.user.utils.CustomImageView
+        <com.hommlie.user.utils.CustomImageView
             android:id="@+id/ivBanner"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType = "fitCenter"
-            android:adjustViewBounds = "true"
-             />
+            android:scaleType="fitXY"
+            />
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

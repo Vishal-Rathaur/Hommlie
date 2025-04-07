@@ -3,16 +3,18 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/dlg_bg_corner_10"
-    android:padding="@dimen/_8sdp"
+    android:paddingTop="@dimen/_5sdp"
+    android:paddingEnd="@dimen/_8sdp"
+    android:paddingStart="@dimen/_8sdp"
+    android:paddingBottom="@dimen/_12sdp"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
-
     android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/iv_close"
         android:layout_width="@dimen/_20sdp"
         android:layout_height="@dimen/_20sdp"
         android:src="@drawable/ic_close"
-        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_5sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/Blackcolor" />
@@ -25,27 +27,27 @@
         android:layout_width="@dimen/_80sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
         app:layout_constraintTop_toBottomOf="@id/iv_close"
         android:layout_height="@dimen/_80sdp"/>
 
-    <com.ikksa.customfonts.MyTextView_SemiBold
+    <TextView
         android:id="@+id/tvRemoveTitle"
         android:layout_width="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivTrueCheckMark"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
         android:text="@string/remove_product"
-        android:textColor="@color/black"
-        android:textSize="22sp"
+        android:textColor="#1F2937"
+        android:textSize="18sp"
         android:layout_height="wrap_content"/>
 
 
-    <com.ikksa.customfonts.MyTextView_Light
+    <TextView
         android:id="@+id/tvAlertMessage"
-        android:textColor="@color/Blackcolor"
-        android:textSize="14sp"
+        android:textColor="@color/color_545454"
+        android:textSize="13sp"
         app:layout_constraintTop_toBottomOf="@id/tvRemoveTitle"
         android:text="@string/product_added_successfully_into_your_cart"
         android:layout_width="wrap_content"
@@ -53,30 +55,34 @@
         android:layout_marginHorizontal="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/plusjakartasans_semi_bold"
         android:layout_height="wrap_content"/>
 
 
 
-    <com.ikksa.customfonts.Button_Medium
+    <com.hommlie.customfonts.Button_Medium
         android:id="@+id/btnProceed"
         style="@style/ClickableView"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_35sdp"
-        android:background="@drawable/bg_white_10"
-        app:backgroundTint="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
         android:text="@string/proceed"
         android:textAllCaps="false"
-        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:textAppearance="@style/PoppinsSemiBold"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="@dimen/_12ssp"
         app:layout_constrainedHeight="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvAlertMessage"
-        app:layout_constraintVertical_bias="1" />
+        app:layout_constraintVertical_bias="1"
+        android:fontFamily="@font/plusjakartasans_semi_bold"
+        app:backgroundTint="@color/black"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:background="@drawable/transparent_back_5sdp"/>
 
 
 

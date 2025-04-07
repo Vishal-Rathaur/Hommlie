@@ -1,4 +1,4 @@
-package com.ikksa.user
+package com.hommlie.user
 
 import org.junit.Test
 

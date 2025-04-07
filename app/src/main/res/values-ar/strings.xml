@@ -1,8 +1,12 @@
 <resources>
-    <string name="app_name">اكسا</string>
-
+    <string name="app_name">Hommlie</string>
+    <string name="facebook_id" translatable="false">968050263958529</string>
     <string name="language_english">en</string>
-    <string name="language_hindi">ar</string>
+    <string name="language_arabic">ar</string>
+    <string name="language_kannada">kn</string>
+    <string name="language_hindi">hi</string>
+
+    <string name="location_key" translatable="false">AIzaSyBmaR3DSseRPUCCvGT0Ru8aK-Jrm39NlTE</string>
 
         <string name="don_t_have_an_account">ليس لديك حساب؟</string>
         <string name="skip_continue"><![CDATA[تخطي والمتابعة]]></string>
@@ -61,7 +65,8 @@
         <string name="postcode_zip">الرمز البريدي</string>
         <string name="phone">رقم الجوال</string>
         <string name="save">حفظ</string>
-        <string name="email_address">البريد الالكتروني</string>
+    <string name="delete_account">هل أنت متأكد أنك تريد حذف حسابك؟</string>
+    <string name="email_address">البريد الالكتروني</string>
         <string name="change_password">تغيير كلمة المرور</string>
         <string name="old_password">كلمة المرور القديمة</string>
         <string name="new_password">كلمة المرور الجديدة</string>
@@ -279,7 +284,10 @@
         <string name="otp_description">اتأكد من كلمة المرور لمرة واحدة في رسائلك النصية،ادخل كلمة المرور لمرة واحدة ادناه للاستمرار </string>
         <string name="send">ارسال</string>
         <string name="subject">الموضوع</string>
-        <string name="add_money">اضافة المال</string>
+    <string name="hello_blank_fragment">مرحبا بالجزء الفارغ</string>
+
+    <string name="delete_text">حذف</string>
+    <string name="add_money">اضافة المال</string>
         <string name="add_money_to_wallet">اضافة المال للمحفظة</string>
         <string name="select_payment_method">اختيار طريقة الدفع</string>
         <string name="enter_your_amount">ادخال القيمة</string>
@@ -311,5 +319,72 @@
         <string name="swipeleft">اسحب لليسار للتعديل/المسح</string>
        <string name="wishlist_empty_title">قائمة رغباتك فارغة</string>
        <string name="wishlist_empty_desc">اضغط على القلب بجوار المنتج. سنحفظها لك هنا في قائمة أمنياتك الآن.</string>
+    <string name="booking">حجز</string>
+    <string name="offer">عرض</string>
+    <string name="account">حساب</string>
+    <string name="services">خدمات</string>
+    <string name="what_you_are_looking_for_today">ما تبحث عنه اليوم</string>
+    <string name="see_all">عرض الكل</string>
+    <string name="about_hommlie">حول Hommlie</string>
+    <string name="terms_condition"><![CDATA[الشروط والأحكام]]></string>
+    <string name="refund_cancellation_policy"><![CDATA[سياسة الاسترداد والإلغاء]]></string>
+    <string name="hommlie_wallet">محفظة Hommlie</string>
+    <string name="manage_address">إدارة العنوان</string>
+    <string name="career">وظائف</string>
+    <string name="earn_with_hommlie">اكسب مع Hommlie</string>
+    <string name="most_booked_service">أكثر خدمة تم حجزها</string>
+    <string name="to_provide_better_service">لتقديم خدمة أفضل</string>
+    <string name="add_your_address">أضف عنوانك</string>
+    <string name="shop">المتجر</string>
+    <string name="your_account">حسابك</string>
+    <string name="personal_payment_details">التفاصيل الشخصية/المدفوعات</string>
+    <string name="feedback_amp_information"><![CDATA[التعليقات والمعلومات]]></string>
+    <string name="delete_account_text">حذف الحساب</string>
+    <string name="my_orders">طلباتي</string>
+    <string name="help_amp_support"><![CDATA[المساعدة والدعم]]></string>
+    <string name="successfully_added">Successfully Added</string>
+    <string name="bage">Bag</string>
+    <string name="cleaning_services">Cleaning Services</string>
+    <string name="pest_control">Pest Control</string>
+    <string name="safety_pro_netting">Safety-Pro Netting</string>
+    <string name="mosquito_mesh">Mosquito Mesh</string>
+    <string name="discover">Discover</string>
+    <string name="book_an_inspection">Book an Inspection</string>
+    <string name="book_on_whatsapp">Book on Whatsapp</string>
+    <string name="complaints">Complaints</string>
+    <string name="thoughtful_curations">Thoughtful Curations</string>
+    <string name="play_pause">play/pause</string>
+    <string name="why_hommlie">Why Hommlie</string>
+    <string name="iso_certified_company">ISO Certified Company</string>
+    <string name="in_house_trained_professionals">In-house trained professionals</string>
+    <string name="warranty_backed_service">Warranty Backed Service</string>
+    <string name="digital_monitoring">Digital Monitoring</string>
+    <string name="cib_approved_chemical">CIB Approved Chemical</string>
+    <string name="cost_effective">Cost effective</string>
+    <string name="health_safety_and_eco_friendly_service_and_products">Health, Safety and Eco Friendly service and products</string>
+    <string name="shop_now">Shop Now</string>
+    <string name="what_people_say">What people say</string>
+    <string name="some_interesting_facts_about_hommlie_services">Some interesting facts about Hommlie Services</string>
+    <string name="follow_us">Follow Us</string>
+    <string name="monthly_job_request">Monthly Job Request</string>
+    <string name="completed_jobs">Completed Jobs</string>
+    <string name="app_users">App Users</string>
+    <string name="resend">Resend</string>
+    <string name="referral_code_optional">Referral Code (Optional)</string>
+    <string name="enter_referral_code">Enter referral code</string>
+    <string name="by_giving_your_information_you_agree_to_our">By giving your information, you agree to our</string>
+    <string name="terms_amp_contidions"><![CDATA[Terms & Contidions]]></string>
+    <string name="and">and</string>
+    <string name="review_booking">Review Booking</string>
+    <string name="booking_successful">Booking Successful</string>
+    <string name="selected_address">Selected Address</string>
+    <string name="enter_your_address">Enter your address</string>
+    <string name="get_location">Get location</string>
+    <string name="cart_empty">Cart empty</string>
+    <string name="no_booking">No Booking</string>
+    <string name="you_have_nothing_on_your_list_yet_nit_s_never_too_late_to_change_it">You have nothing on your list yet.\nIt\'s never too late to change it 🙃</string>
+    <string name="no_result_found">No Result Found</string>
+    <string name="xpress_4hrs_delivery">Xpress 4hrs delivery</string>
 
-    </resources>
+
+</resources>

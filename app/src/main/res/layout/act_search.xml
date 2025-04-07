@@ -5,6 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rl_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toTopOf="parent">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/rlToolBar"
         android:layout_width="match_parent"
@@ -12,18 +20,8 @@
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/ivBack"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/_4sdp"
-            android:src="@drawable/ic_back"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
@@ -43,55 +41,81 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/ll_search"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_35sdp"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:background="@drawable/bg_editfield"
-        android:backgroundTint="@color/LightGray_Color"
-        android:orientation="horizontal"
-        android:paddingTop="@dimen/_3sdp"
-        android:paddingBottom="@dimen/_3sdp"
-        app:layout_constraintTop_toBottomOf="@id/rlToolBar">
+        android:layout_height="@dimen/_39sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/_11sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        app:layout_constraintStart_toEndOf="@id/ivBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="1dp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_collapseParallaxMultiplier="0"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
 
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edSearch"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_search"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:hint="Search Here"
-            android:imeOptions="actionSearch"
-            android:inputType="textPersonName"
-            android:paddingHorizontal="@dimen/_24sdp"
-            android:paddingStart="@dimen/_5sdp"
-            android:textAlignment="viewStart"
-            app:layout_constrainedWidth="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:paddingEnd="@dimen/_10sdp"
-            app:layout_constraintStart_toEndOf="@id/ivSearch"
-            android:textAppearance="@style/PoppinsRegular"
-            android:textSize="@dimen/_11ssp"
-            app:searchIcon="@drawable/ic_searchs" />
+            >
 
-        <ImageView
-            android:id="@+id/ivSearch"
-            android:layout_width="@dimen/_28sdp"
-            android:layout_height="@dimen/_28sdp"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="@dimen/_8sdp"
-            android:padding="@dimen/_5sdp"
-            android:src="@drawable/ic_search"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/gray" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_back"
+                android:tint="@color/home_header"
+                android:layout_marginStart="@dimen/_12sdp"
+                />
 
+            <EditText
+                android:id="@+id/ed_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/_35sdp"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/home_header"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@color/white"
+                app:layout_constraintStart_toEndOf="@id/ivBack"
+                android:hint="Search what you need..."
+                android:fontFamily="@font/helvetica"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/_1sdp"
+                />
+
+            <ImageView
+                android:id="@+id/iv_clear"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/places_ic_clear"
+                android:tint="@color/home_header"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/_10sdp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvsearch"
@@ -105,13 +129,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/ll_search"
+        app:layout_constraintTop_toBottomOf="@id/rl_card"
         tools:listitem="@layout/row_search" />
     <ImageView
         android:id="@+id/tvNoDataFound"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/searchs"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:src="@drawable/ic_startsearch"
         android:textColor="@color/medium_gray"
         android:textSize="@dimen/_12ssp"
         tools:ignore="MissingPrefix"

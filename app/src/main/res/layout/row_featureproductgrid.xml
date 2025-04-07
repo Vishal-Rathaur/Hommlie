@@ -2,19 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="140dp"
-    android:layout_marginHorizontal="@dimen/_5sdp"
+    android:layout_width="137dp"
+    android:layout_marginHorizontal="0dp"
     android:layout_marginTop="@dimen/_5sdp"
     android:layout_marginBottom="@dimen/_5sdp"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/_8sdp"
+    android:background="@color/white">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@null"
-        app:cardCornerRadius="0dp"
-        app:strokeWidth="0.01dp"
-        app:strokeColor="#bcbcbc"
+        app:cardCornerRadius="@dimen/_5sdp"
         app:cardElevation="0dp"
         app:cardMaxElevation="0dp"
         app:cardPreventCornerOverlap="false"
@@ -25,9 +25,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/white">
 
             <ImageView
                 android:id="@+id/ivwishlist"
@@ -40,45 +42,59 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.95"
                 app:layout_constraintStart_toStartOf="parent"
+                android:visibility="gone"
+                android:scaleType="fitXY"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.03" />
 
-            <com.ikksa.user.utils.CustomImageView
-                android:id="@+id/ivProduct"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvProduct"
                 android:layout_width="match_parent"
-                android:layout_height= "wrap_content"
-                android:scaleType = "fitCenter"
-                android:adjustViewBounds = "true"
-                android:elevation="@dimen/_minus4sdp"
+                android:layout_height="130dp"
+                app:layout_constraintBottom_toTopOf="@id/cl1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/cl1"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                app:layout_constraintTop_toTopOf="parent"
+               app:cardElevation="2dp"
+                app:cardCornerRadius="@dimen/_5sdp">
 
+                <ImageView
+                android:id="@+id/ivProduct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:elevation="0dp"
+                android:scaleType="fitXY"
+                 />
+            </androidx.cardview.widget.CardView>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl1"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ivProduct">
+                app:layout_constraintTop_toBottomOf="@id/cvProduct">
 
-                <com.ikksa.customfonts.MyTextView_Light
+                <TextView
                     android:id="@+id/tvProductName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_5sdp"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
                     android:layout_marginRight="5dp"
-                    android:maxLines="1"
+                    android:justificationMode="inter_word"
+                    android:maxLines="2"
+                    android:fontFamily="@font/sfprodisplay_medium"
                     android:ellipsize="end"
-                    android:singleLine="true"
                     android:text="Lines parinted shirt"
-                    android:textAlignment="viewStart"
-                    android:textColor="#555555"
-                    android:textSize="8sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_222222"
+                    android:textSize="14sp"
+                    android:lines="2"
                     app:layout_constraintBottom_toTopOf="@id/cl_rate"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -105,7 +121,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:tint="@color/darkyellow" />
 
-                    <com.ikksa.customfonts.MyTextView_Regular
+                    <com.hommlie.customfonts.MyTextView_Regular
                         android:id="@+id/tvRatePro"
                         android:layout_width="@dimen/_15sdp"
                         android:layout_height="@dimen/_12sdp"
@@ -131,9 +147,10 @@
                     android:layout_marginStart="@dimen/_5sdp"
                     app:layout_constraintHorizontal_bias="0.3"
                     app:layout_constraintStart_toStartOf="parent"
+                    android:visibility="gone"
                     app:layout_constraintTop_toBottomOf="@id/cl_rate">
 
-                    <com.ikksa.customfonts.MyTextView_SemiBold
+                    <com.hommlie.customfonts.MyTextView_SemiBold
                         android:id="@+id/tvProductPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -141,14 +158,13 @@
                         android:textAlignment="viewStart"
                         android:textAppearance="@style/PoppinsSemiBold"
                         android:textColor="@color/black"
-                        android:textSize="10sp"
-                        android:textStyle="bold"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.01"
                         app:layout_constraintStart_toStartOf="parent" />
 
-                    <com.ikksa.customfonts.MyTextView_Light
+                    <com.hommlie.customfonts.MyTextView_Light
                         android:id="@+id/tvProductDisprice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -156,8 +172,9 @@
                         android:text="AED 70.00"
                         android:textAlignment="viewStart"
                         android:textAppearance="@style/PoppinsMedium"
-                        android:textColor="@color/medium_gray"
-                        android:textSize="7sp"
+                        android:textColor="@color/color_222222"
+                        android:textSize="10sp"
+                        android:visibility="visible"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.05"

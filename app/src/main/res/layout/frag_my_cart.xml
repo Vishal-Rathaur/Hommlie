@@ -3,20 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/activityBgColor">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
         android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_rl"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/activityBgColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:cardCornerRadius="0dp"
+            app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/rlToolBar"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
-            android:background="@color/white"
+            android:background="@color/activityBgColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            >
 
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -25,9 +38,9 @@
                 android:layout_centerInParent="true"
                 android:text="@string/my_cart"
                 android:textAllCaps="false"
-                android:textAppearance="@style/PoppinsSemiBold"
+                android:fontFamily="@font/sfprodisplay_medium"
                 android:textColor="@color/Blackcolor"
-                android:textSize="@dimen/_14ssp"
+                android:textSize="@dimen/_15ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -35,6 +48,23 @@
                 tools:ignore="MissingPrefix" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_title"
+            app:layout_constraintTop_toBottomOf="@+id/card_rl"
+            android:text="Swipe left to remove from cart"
+            android:textAllCaps="false"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/round_mg"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:textSize="@dimen/_9sdp"
+            android:textStyle="normal" />
 
 
         <androidx.recyclerview.widget.RecyclerView
@@ -47,22 +77,26 @@
             app:layout_constraintBottom_toTopOf="@id/btncheckout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rlToolBar" />
+            app:layout_constraintTop_toBottomOf="@id/rv_title" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btncheckout"
             style="@style/ClickableView"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:background="@color/colorPrimary"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/bg_pink"
+            android:backgroundTint="@color/color249370"
             android:padding="5dp"
             android:text="@string/checkout"
             android:textAllCaps="false"
             android:textAppearance="@style/PoppinsSemiBold"
             android:textColor="@color/white"
-            android:textSize="@dimen/_12ssp"
+            android:textSize="@dimen/_11ssp"
             android:visibility="gone"
             app:flow_firstHorizontalBias="1"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_45sdp"
             app:layout_constrainedHeight="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -92,28 +126,30 @@
             android:visibility="gone">
 
             <ImageView
-                android:layout_width="210dp"
-                android:layout_height="140dp"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_200sdp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/empty_cart" />
+                android:src="@drawable/empty_cart"
+               />
 
-            <com.ikksa.customfonts.MyTextView_SemiBold
+            <com.hommlie.customfonts.MyTextView_SemiBold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="35dp"
-                android:text="@string/empty_cart_title"
+                android:layout_marginTop="-30dp"
+                android:text="@string/cart_empty"
                 android:textColor="@color/black"
-                android:textSize="22sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
-            <com.ikksa.customfonts.MyTextView_Light
+            <com.hommlie.customfonts.MyTextView_Light
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:gravity="center"
-                android:text="@string/empty_cart_sub_title"
+                android:visibility="visible"
+                android:text="Your cart is empty\nStart adding service to enjoy hygenie!"
                 android:textColor="#1D1F22"
                 android:textSize="12dp"
                 android:id="@+id/empty_title"/>

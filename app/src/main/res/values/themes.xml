@@ -10,8 +10,11 @@
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/white</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
         <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
         <!-- Customize your theme here. -->
     </style>
     <style name="DefaultPayTheme" parent="Theme.Ikksa">
@@ -27,25 +30,76 @@
         <item name="SavedCardButtonStyle">@style/svdCardsBtnStyle</item>
     </style>
 
+    <style name="Theme.Splash" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowBackground">@color/purple_primary</item>
+    </style>
+
+    <style name="Theme.Login" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+    </style>
+
+    <style name="Theme.MyCustomTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Ensure the app layout is not drawn under the status bar -->
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:fitsSystemWindows">true</item>
+<!--        <item name="android:forceDarkAllowed">false</item>-->
+        <item name="android:statusBarColor">@color/purple_primary</item>
+
+<!--        &lt;!&ndash; Ensure status bar icons are visible based on the mode &ndash;&gt;-->
+<!--        <item name="android:windowLightStatusBar">false</item>-->
+    </style>
+
+    <style name="ActMainTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+<!--        <item name="android:forceDarkAllowed">false</item>-->
+    </style>
+
+
+
+    <style name="CollapsingTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Make the status bar fully transparent -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <style name="BottomRoundedCard" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/BottomRoundedShape</item>
+    </style>
+
+    <style name="BottomRoundedShape">
+        <item name="cornerSizeBottomLeft">16dp</item>
+        <item name="cornerSizeBottomRight">16dp</item>
+    </style>
+
+
+
+
     <style name="PoppinsMedium">
-        <item name="fontPath">fonts/Poppins-Medium.ttf</item>
+        <item name="fontPath">fonts/plussakartasans_medium.ttf</item>
     </style>
 
     <style name="PoppinsLight">
-        <item name="fontPath">fonts/Poppins-Light.ttf</item>
+        <item name="fontPath">fonts/plussakartasans_light.ttf</item>
     </style>
 
     <style name="PoppinsRegular">
-        <item name="fontPath">fonts/Poppins-Regular.ttf</item>
+        <item name="fontPath">fonts/plusjkartasans_regular.ttf</item>
     </style>
 
     <style name="PoppinsSemiBold">
-        <item name="fontPath">fonts/Poppins-SemiBold.ttf</item>
+        <item name="fontPath">fonts/plusjakartasans_semi_bold.ttf</item>
     </style>
 
 
     <style name="PoppinsBold">
-        <item name="fontPath">fonts/Poppins-Bold.ttf</item>
+        <item name="fontPath">fonts/plusjakartasans_bold.ttf</item>
     </style>
 
     <style name="ClickableView">
@@ -84,6 +138,61 @@
     <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@drawable/bg_dlg</item>
     </style>
+
+    <style name="plusjakartasans_bold">
+        <item name="android:fontFamily">@font/plusjakartasans_bold</item>
+        <item name="android:lineHeight">16dp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="plusjakartasans_semi_bold">
+        <item name="android:fontFamily">@font/plusjakartasans_semi_bold</item>
+        <item name="android:lineHeight">16dp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <style name="plussakartasans_medium">
+        <item name="android:fontFamily">@font/plussakartasans_medium</item>
+        <item name="android:lineHeight">16dp</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+    <style name="plussakartasans_light">
+        <item name="android:fontFamily">@font/plussakartasans_light</item>
+        <item name="android:lineHeight">16dp</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="plusjkartasans_regular">
+        <item name="android:fontFamily">@font/plusjkartasans_regular</item>
+        <item name="android:lineHeight">16dp</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+    <style name="plusjkartasans_forhome_icon">
+        <item name="android:fontFamily">@font/plusjakartasans_bold</item>
+        <item name="android:lineHeight">13dp</item>
+
+    </style>
+
+    <!-- res/values/styles.xml -->
+    <style name="CustomRatingBar" parent="Widget.AppCompat.RatingBar.Small">
+        <!-- The color when the RatingBar is clicked or activated -->
+        <item name="colorControlActivated">#FFD700</item> <!-- Yellow color for activated state -->
+
+        <!-- The color of stars when they're not activated (default state) -->
+        <item name="colorControlNormal">@color/medium_gray</item> <!-- Gray color for unfilled stars -->
+
+        <!-- Optional, ensure the progress (filled stars) has the yellow color -->
+        <item name="android:progressTint">#FFD700</item> <!-- Yellow for progress stars -->
+
+    </style>
+
+
+
+    <style name="TransparentBottomSheet" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+
 
 
 </resources>
